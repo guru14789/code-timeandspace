@@ -1,14 +1,77 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Complexity Visualizer | Real-Time Analysis</title>
-    <meta name="description" content="Analyze and visualize code complexity metrics in real-time. Track cyclomatic complexity, maintainability index, and code quality metrics." />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Code Complexity Visualizer - Analyze Your Code in Real-Time</title>
+  <meta name="description" content="Professional code complexity analysis tool trusted by millions of developers. Get instant Big O complexity analysis, metrics, and visualizations for your code." />
+  <meta name="keywords" content="code complexity, big o notation, code analysis, programming tools, developer tools, software engineering" />
+  <meta name="author" content="Code Complexity Visualizer" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-site.com/" />
+  <meta property="og:title" content="Code Complexity Visualizer - Analyze Your Code in Real-Time" />
+  <meta property="og:description" content="Professional code complexity analysis tool trusted by millions of developers. Get instant Big O complexity analysis, metrics, and visualizations for your code." />
+  <meta property="og:image" content="https://your-site.com/og-image.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://your-site.com/" />
+  <meta property="twitter:title" content="Code Complexity Visualizer - Analyze Your Code in Real-Time" />
+  <meta property="twitter:description" content="Professional code complexity analysis tool trusted by millions of developers. Get instant Big O complexity analysis, metrics, and visualizations for your code." />
+  <meta property="twitter:image" content="https://your-site.com/twitter-image.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Theme color -->
+  <meta name="theme-color" content="#000000" />
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap"></noscript>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Code Complexity Visualizer",
+    "description": "Professional code complexity analysis tool trusted by millions of developers",
+    "url": "https://your-site.com",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  
+  <!-- Performance optimizations -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('SW registered'))
+          .catch(error => console.log('SW registration failed'));
+      });
+    }
+  </script>
+</body>
 </html>
