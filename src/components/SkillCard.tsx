@@ -18,7 +18,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, index }) => {
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ delay: index * 0.1, duration: 0.6 }}
       whileHover={{ scale: 1.03, y: -5 }}
-      className="group bg-gray-900 rounded-3xl p-6 shadow-2xl hover:shadow-white/5 transition-all duration-500 border border-gray-800 hover:border-gray-700"
+      className="group bg-gradient-to-br from-gray-900 via-black to-gray-950 rounded-3xl p-6 shadow-2xl hover:shadow-white/5 transition-all duration-500 border border-gray-800 hover:border-gray-700"
     >
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-4">

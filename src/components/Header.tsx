@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, BarChart3, TrendingUp, History, Activity, Menu, X, Github, Star } from 'lucide-react';
+import logo from "./logo.png";
 
 interface HeaderProps {
   activeView: 'editor' | 'metrics' | 'visualization' | 'history';
@@ -34,9 +35,10 @@ export const Header: React.FC<HeaderProps> = ({ activeView, onViewChange }) => {
             className="flex items-center space-x-4"
           >
             <div className="relative">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <Activity className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-br-500 to-br-600 rounded-xl flex items-center justify-center">
+                <img src={logo} alt="Logo" className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
+
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}

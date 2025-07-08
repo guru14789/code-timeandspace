@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Code, Copy, Download, Upload, Trash2, Check, AlertCircle } from 'lucide-react';
@@ -108,13 +107,13 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      className="bg-gray-900 rounded-2xl border border-gray-800 h-full flex flex-col"
+      className="bg-gradient-to-b from-black via-neutral-900 to-black rounded-2xl border border-gray-800 h-full flex flex-col"
     >
       {/* Header */}
       <div className="p-4 border-b border-gray-800">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-blue-500/20 rounded-lg">
+            <div className="p-2 bg-gradient-to-br from-black via-gray-800 to-black rounded-lg">
               <Code className="h-5 w-5 text-blue-400" />
             </div>
             <div>
@@ -135,7 +134,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
                 <Copy className="h-4 w-4 text-gray-400" />
               )}
             </button>
-            
+
             <button
               onClick={handleDownload}
               className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
@@ -143,7 +142,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
             >
               <Download className="h-4 w-4 text-gray-400" />
             </button>
-            
+
             <label className="p-2 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer" title="Upload file">
               <Upload className="h-4 w-4 text-gray-400" />
               <input
@@ -153,7 +152,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
                 className="hidden"
               />
             </label>
-            
+
             <button
               onClick={handleClear}
               className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
@@ -170,7 +169,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
             <button
               key={index}
               onClick={() => onChange(example.code)}
-              className="text-xs px-3 py-1 bg-gray-800 hover:bg-gray-700 rounded-full text-gray-300 transition-colors"
+              className="text-xs px-3 py-1 bg-gradient-to-r from-gray-800 to-black hover:from-gray-700 rounded-full text-gray-300 transition-colors"
             >
               {example.name}
             </button>
@@ -180,7 +179,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
 
       {/* Error Display */}
       {error && (
-        <div className="mx-4 mt-4 p-3 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center space-x-2">
+        <div className="mx-4 mt-4 p-3 bg-gradient-to-r from-red-900 via-red-800 to-red-900 border border-red-500/50 rounded-lg flex items-center space-x-2">
           <AlertCircle className="h-4 w-4 text-red-400" />
           <span className="text-sm text-red-400">{error}</span>
         </div>
@@ -188,12 +187,12 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
 
       {/* Code Editor */}
       <div className="flex-1 p-4">
-        <div className="h-full bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+        <div className="h-full bg-gradient-to-b from-black via-neutral-900 to-black rounded-lg border border-gray-700 overflow-hidden">
           <div className="flex h-full">
             {/* Line Numbers */}
-            <div className="bg-gray-900 p-4 text-right min-w-[3rem] border-r border-gray-700">
+            <div className="bg-black p-4 text-right min-w-[3rem] border-r border-gray-700">
               {lineNumbers.map((num) => (
-                <div key={num} className="text-gray-500 text-sm leading-6">
+                <div key={num} className="text-gray-600 text-sm leading-6">
                   {num}
                 </div>
               ))}
@@ -206,12 +205,11 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onChange, isAnalyz
                 value={code}
                 onChange={(e) => onChange(e.target.value)}
                 className="w-full h-full p-4 bg-transparent text-white font-mono text-sm resize-none outline-none leading-6"
-                placeholder="// Start typing your code here...
-// The analysis will update in real-time!"
+                placeholder="// Start typing your code here...\n// The analysis will update in real-time!"
                 spellCheck={false}
                 autoComplete="off"
               />
-              
+
               {/* Analysis Status */}
               {isAnalyzing && (
                 <div className="absolute top-2 right-2 bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">

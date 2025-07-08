@@ -106,12 +106,12 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gray-900 rounded-2xl border border-gray-800 p-8 h-full flex items-center justify-center"
+        className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-8 h-full flex items-center justify-center"
       >
         <div className="text-center">
-          <TrendingUp className="h-16 w-16 text-gray-600 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-gray-400 mb-2">No Data to Visualize</h3>
-          <p className="text-gray-500">Analyze some code to see beautiful complexity visualizations</p>
+          <TrendingUp className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-300 mb-2">No Data to Visualize</h3>
+          <p className="text-gray-400"> Analyze some code to see beautiful complexity visualizations</p>
         </div>
       </motion.div>
     );
@@ -124,10 +124,10 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
       className="space-y-6 h-full overflow-y-auto"
     >
       {/* Complexity Trends */}
-      <div className="bg-gray-900 rounded-2xl border border-gray-800 p-6">
+      <div className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6">
         <div className="flex items-center space-x-3 mb-6">
-          <div className="p-2 bg-blue-500/20 rounded-lg">
-            <TrendingUp className="h-5 w-5 text-blue-400" />
+          <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg">
+            <TrendingUp className="h-5 w-5 text-blue-300" />
           </div>
           <div>
             <h3 className="font-semibold text-white">Complexity Trends Over Time</h3>
@@ -144,7 +144,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
                 <YAxis stroke="#9CA3AF" />
                 <Tooltip 
                   contentStyle={{ 
-                    backgroundColor: '#1F2937', 
+                    backgroundColor: '#111827', 
                     border: '1px solid #374151',
                     borderRadius: '8px',
                     color: '#F9FAFB'
@@ -158,7 +158,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
             </ResponsiveContainer>
           </div>
         ) : (
-          <div className="h-80 flex items-center justify-center text-gray-500">
+          <div className="h-80 flex items-center justify-center text-gray-400">
             <p>Need more analysis history to show trends</p>
           </div>
         )}
@@ -170,11 +170,11 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gray-900 rounded-2xl border border-gray-800 p-6"
+          className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-purple-500/20 rounded-lg">
-              <BarChart3 className="h-5 w-5 text-purple-400" />
+            <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg">
+              <BarChart3 className="h-5 w-5 text-purple-300" />
             </div>
             <div>
               <h3 className="font-semibold text-white">Function Complexity Analysis</h3>
@@ -191,7 +191,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
                   <YAxis stroke="#9CA3AF" />
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: '#1F2937', 
+                      backgroundColor: '#111827', 
                       border: '1px solid #374151',
                       borderRadius: '8px',
                       color: '#F9FAFB'
@@ -208,7 +208,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
               </ResponsiveContainer>
             </div>
           ) : (
-            <div className="h-64 flex items-center justify-center text-gray-500">
+            <div className="h-64 flex items-center justify-center text-gray-400">
               <p>No functions detected</p>
             </div>
           )}
@@ -219,11 +219,11 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-gray-900 rounded-2xl border border-gray-800 p-6"
+          className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-green-500/20 rounded-lg">
-              <Zap className="h-5 w-5 text-green-400" />
+            <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg">
+              <Zap className="h-5 w-5 text-green-300" />
             </div>
             <div>
               <h3 className="font-semibold text-white">Time vs Space Complexity</h3>
@@ -258,7 +258,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
                   />
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: '#1F2937', 
+                      backgroundColor: '#111827', 
                       border: '1px solid #374151',
                       borderRadius: '8px',
                       color: '#F9FAFB'
@@ -282,7 +282,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
               </ResponsiveContainer>
             </div>
           ) : (
-            <div className="h-64 flex items-center justify-center text-gray-500">
+            <div className="h-64 flex items-center justify-center text-gray-400">
               <p>No function data available</p>
             </div>
           )}
@@ -295,15 +295,15 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-gray-900 rounded-2xl border border-gray-800 p-6"
+          className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6 shadow-lg"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-yellow-500/20 rounded-lg">
-              <Activity className="h-5 w-5 text-yellow-400" />
+            <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg border border-gray-700">
+              <Activity className="h-5 w-5 text-yellow-300" />
             </div>
             <div>
-              <h3 className="font-semibold text-white">Detected Algorithm Patterns</h3>
-              <p className="text-sm text-gray-400">Algorithmic complexity analysis</p>
+              <h3 className="font-semibold text-white text-lg">🔍 Detected Algorithm Patterns ({algorithmPatternsData.length})</h3>
+              <p className="text-sm text-gray-400">Algorithmic complexity analysis with performance insights</p>
             </div>
           </div>
           
@@ -315,7 +315,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
                 <YAxis stroke="#9CA3AF" />
                 <Tooltip 
                   contentStyle={{ 
-                    backgroundColor: '#1F2937', 
+                    backgroundColor: '#111827', 
                     border: '1px solid #374151',
                     borderRadius: '8px',
                     color: '#F9FAFB'
@@ -335,11 +335,11 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-gray-900 rounded-2xl border border-gray-800 p-6"
+          className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-red-500/20 rounded-lg">
-              <PieChartIcon className="h-5 w-5 text-red-400" />
+            <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg">
+              <PieChartIcon className="h-5 w-5 text-red-300" />
             </div>
             <div>
               <h3 className="font-semibold text-white">Code Smells Distribution</h3>
@@ -367,7 +367,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
                   </Pie>
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: '#1F2937', 
+                      backgroundColor: '#111827', 
                       border: '1px solid #374151',
                       borderRadius: '8px',
                       color: '#F9FAFB'
@@ -377,7 +377,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
               </ResponsiveContainer>
             </div>
           ) : (
-            <div className="h-64 flex items-center justify-center text-gray-500">
+            <div className="h-64 flex items-center justify-center text-gray-400">
               <p>No code smells detected! 🎉</p>
             </div>
           )}
@@ -388,11 +388,11 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6 }}
-          className="bg-gray-900 rounded-2xl border border-gray-800 p-6"
+          className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6"
         >
           <div className="flex items-center space-x-3 mb-6">
-            <div className="p-2 bg-blue-500/20 rounded-lg">
-              <Activity className="h-5 w-5 text-blue-400" />
+            <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg">
+              <Activity className="h-5 w-5 text-blue-300" />
             </div>
             <div>
               <h3 className="font-semibold text-white">Code Quality Radar</h3>
@@ -421,7 +421,7 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
                 />
                 <Tooltip 
                   contentStyle={{ 
-                    backgroundColor: '#1F2937', 
+                    backgroundColor: '#111827', 
                     border: '1px solid #374151',
                     borderRadius: '8px',
                     color: '#F9FAFB'
@@ -438,11 +438,11 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
-        className="bg-gray-900 rounded-2xl border border-gray-800 p-6"
+        className="bg-gradient-to-r from-black to-gray-950 rounded-2xl border border-gray-800 p-6"
       >
         <div className="flex items-center space-x-3 mb-6">
-          <div className="p-2 bg-purple-500/20 rounded-lg">
-            <Clock className="h-5 w-5 text-purple-400" />
+          <div className="p-2 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg">
+            <Clock className="h-5 w-5 text-purple-300" />
           </div>
           <div>
             <h3 className="font-semibold text-white">Complexity Summary</h3>
@@ -451,30 +451,30 @@ export const VisualizationPanel: React.FC<VisualizationPanelProps> = ({ metrics,
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <Clock className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-blue-400">{metrics.timeComplexity.bigO}</div>
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 text-center">
+            <Clock className="h-8 w-8 text-blue-300 mx-auto mb-2" />
+            <div className="text-lg font-bold text-blue-300">{metrics.timeComplexity.bigO}</div>
             <div className="text-sm text-gray-400">Time Complexity</div>
             <div className="text-xs text-gray-500 mt-1">{metrics.timeComplexity.explanation}</div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <HardDrive className="h-8 w-8 text-green-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-green-400">{metrics.spaceComplexity.bigO}</div>
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 text-center">
+            <HardDrive className="h-8 w-8 text-green-300 mx-auto mb-2" />
+            <div className="text-lg font-bold text-green-300">{metrics.spaceComplexity.bigO}</div>
             <div className="text-sm text-gray-400">Space Complexity</div>
             <div className="text-xs text-gray-500 mt-1">{metrics.spaceComplexity.explanation}</div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <BarChart3 className="h-8 w-8 text-yellow-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-yellow-400">{metrics.cyclomaticComplexity}</div>
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 text-center">
+            <BarChart3 className="h-8 w-8 text-yellow-300 mx-auto mb-2" />
+            <div className="text-lg font-bold text-yellow-300">{metrics.cyclomaticComplexity}</div>
             <div className="text-sm text-gray-400">Cyclomatic</div>
             <div className="text-xs text-gray-500 mt-1">Decision points</div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <TrendingUp className="h-8 w-8 text-purple-400 mx-auto mb-2" />
-            <div className="text-lg font-bold text-purple-400">{metrics.maintainabilityIndex}</div>
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 text-center">
+            <TrendingUp className="h-8 w-8 text-purple-300 mx-auto mb-2" />
+            <div className="text-lg font-bold text-purple-300">{metrics.maintainabilityIndex}</div>
             <div className="text-sm text-gray-400">Maintainability</div>
             <div className="text-xs text-gray-500 mt-1">Quality index</div>
           </div>
